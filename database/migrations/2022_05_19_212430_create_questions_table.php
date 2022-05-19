@@ -16,10 +16,17 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->string('title', 100);
+            $table->unsignedBigInteger('form_id');
             $table->string('body');
             $table->string('question_type');
             $table->json('options');
             $table->timestamps();
+
+             //foreign key
+             $table->foreign('form_id')
+             ->references('id')
+             ->on('forms')
+             ->onDelete('cascade');
         });
     }
 
