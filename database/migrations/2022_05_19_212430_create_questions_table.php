@@ -17,9 +17,9 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->string('title', 100);
             $table->unsignedBigInteger('form_id');
-            $table->string('body');
-            $table->string('question_type');
-            $table->json('options');
+            $table->string('description');
+            $table->string('type');
+            $table->json('choices');
             $table->timestamps();
 
              //foreign key
