@@ -9,13 +9,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Question extends Model
 {
-    protected $fillable = [
-        'title',
-        'description',
-        'type',
-        'choices'
+    use HasFactory;
+    protected $guarded = ['id']; 
+    protected $casts = [
+        'choices' => 'array'
     ];
-
+    // protected $fillable = [
+    //     'title',
+    //     'description',
+    //     'type',
+    //     'choices'
+    // ];
     public function answer(){
 
         return $this->hasOne(Answer::class);

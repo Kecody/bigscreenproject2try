@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Form;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 

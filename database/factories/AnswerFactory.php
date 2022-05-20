@@ -16,7 +16,7 @@ class AnswerFactory extends Factory
         return [
             'question_id'=> $this->faker,
             'answerer_id'=> $this->faker,
-            'answer' => $this->faker->sentence(),
+            'answers' => $this->faker->sentence(),
         ];
     }
 }
