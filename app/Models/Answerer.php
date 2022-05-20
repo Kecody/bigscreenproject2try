@@ -10,6 +10,7 @@ class Answerer extends Model
 {
     use HasFactory;
     
+    protected $guarded = ['id'];
     protected $fillable = [
         'user_email',
         'user_token',

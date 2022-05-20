@@ -40,7 +40,7 @@ class FrontController extends Controller
     public function result(Request $request)
     {
         $token = $request->user_token;
-        $user= Answerer::where('user_token',$token)->first();
+        $user= Answerer::where('user_token', $token)->first();
         $answererId= $user->id;
         $questions= Question::all();
         $answers= Answer::where('answerer_id',$answererId)->get();
