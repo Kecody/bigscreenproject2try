@@ -13,12 +13,12 @@ BigScreen - Administration
                     <th>Description</th>
                     <th>Numéro</th>
                 </thead>
-                @foreach($quiz as $questionary)
+                @foreach($forms as $form)
                 <tbody>
                         <tr>
-                            <td>{{$questionary->title}}</td>
-                            <td class="label">{{$questionary->description}}</td>
-                            <td class="label">{{$questionary->id}}</td>
+                            <td>{{$form->title}}</td>
+                            <td class="label">{{$form->description}}</td>
+                            <td class="label">{{$form->id}}</td>
                         </tr>
                 </tbody>
                 @endforeach
