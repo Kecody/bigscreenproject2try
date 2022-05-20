@@ -132,7 +132,7 @@ class AdminController extends Controller
          '4' => 0,
          '5' => 0
        ];
-       // récupèr l'id de la question quartorce et dans un foreach on store les différents réponses des utilisateurs
+       // récupère l'id de la question quartorze et dans un foreach on store les différents réponses des utilisateurs
        // ceci permet en même temps de faire le compte de chaque réponse de la question quartorce
          $res = Answer::where('question_id','14')->get();                  
          foreach($res as $val){
