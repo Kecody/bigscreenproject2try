@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Answer;
 use App\Models\Answerer;
 use App\Models\Question;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -15,31 +16,34 @@ class FrontController extends Controller
     }
     public function message(Request $request)
     {
-        $results=$request->all();
-        $email=$results[1];
+        $results= $request->all();
+        $email= $results[1];
+        $token= Str::random(32);
         //save surveyed data in database
-        $surveyed= new Answerer();
-        $surveyed->user_email=$email;
-        $surveyed->user_token=$token;
-        $surveyed->save();
+        $answerer= new Answerer();
+        $answerer->user_email= $email;
+        $answerer->user_token= $token;
+        $answerer->status = true;
+        // dd($token);
+        $answerer->save();
         //save answer in database
         for($i=1;$i<count($results);$i++){
             $answer= new Answer();
-            $answer->question_id=$i;
-            $answer->surveyed_id=$surveyed->id;
-            $answer->answer=$results[$i];
+            $answer->question_id= $i;
+            $answer->answerer_id= $answerer->id;
+            $answer->answer= $results[$i];
             $answer->save();
         }    
         return view('front.quizUrl', ['user_token'=>$token]);
     }  
     
-    public function result()
+    public function result(Request $request)
     {
         $token = $request->user_token;
         $user= Answerer::where('user_token',$token)->first();
         $answererId= $user->id;
         $questions= Question::all();
         $answers= Answer::where('answerer_id',$answererId)->get();
-        return view('front.quizResult', ['questions'=>$questions],['answers'=>$answers]);
+        return view('front.quizResult', ['questions'=>$questions], ['answers'=>$answers]);
     }    
 }

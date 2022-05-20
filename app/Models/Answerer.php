@@ -11,9 +11,9 @@ class Answerer extends Model
     use HasFactory;
     
     protected $fillable = [
-        'user_token',
         'user_email',
-        'status',
+        'user_token',
+        'status'
     ];
     
     public function answers(){

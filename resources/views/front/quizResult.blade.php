@@ -12,13 +12,13 @@ BigScreen - Questionnnaire
         <div class="d-flex align-items-center justify-content-center vh-50">
             <div class="card-body text-white bg-primary my-3 mb-3 mx-auto " style="max-width: 60rem;">
                 {{-- <h5>{{$answers[0]->created_at->isoFormat('DD.mm.YYYY à HH.mm')}}</h5> --}}
-                <table class = "table">
+                <table class = "table table-striped">
                     <thead>
                         <th>Numéro</th>
                         <th>Question</th>
                         <th>Réponse</th>
                     </thead>
-                    {{-- @foreach ($answers as $answer)
+                    @foreach ($answers as $answer)
                     <tbody>
                             <tr>
                                 <td>{{ $questions[$answer->question_id-1]->title }}</td>
@@ -27,7 +27,7 @@ BigScreen - Questionnnaire
                             </tr>
                     </tbody>
                 </table>
-                @endforeach     --}}
+                @endforeach    
             </div>
         </div>
     </div>

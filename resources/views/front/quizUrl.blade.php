@@ -18,8 +18,9 @@ BigScreen - Questionnnaire
             votre investissement, nous vous préparons une application toujours plus
             facile à utiliser, seul ou en famille.
             Si vous désirez consulter vos réponse ultérieurement, vous pouvez consultez
-            cette adresse:
+            cette adresse: 
         </p>
+        <a href="/result/{{$user_token}}">Voir mes réponses</a>
     {{-- <a href="http:{{url("poll/".$poll_url)}}">http:{{url("poll/".$poll_url)}}</a> --}}
     </div>
     </div>

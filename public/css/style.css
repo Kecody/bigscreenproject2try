@@ -13,3 +13,20 @@ img {
     font-weight: bold;
     font-size: 1.8rem;
 }
+.text-blue {
+    color:#49b2b1;
+    font-weight: bold;
+    word-spacing: .5rem;
+}
+label, p{
+    margin-bottom: 1.4rem;
+    font-size: 1.2rem;
+}
+.text-info{
+    font-weight: bold;
+}
+hr {
+    margin: 1.5rem 0 !important;
+    /* color:#49b2b1 !important; */
+    height: 3px!important;
+}

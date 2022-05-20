@@ -20,9 +20,9 @@ class Question extends Model
     //     'type',
     //     'choices'
     // ];
-    public function answer(){
+    public function answers(){
 
-        return $this->hasOne(Answer::class);
+        return $this->hasMany(Answer::class);
     }
     public function form(){
 

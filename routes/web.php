@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +25,7 @@ Route::get('/form', [FrontController::class, 'form'])->name('form');
 
 Route::post('/message',[FrontController::class, 'message'])->name('message');
 
-Route::get('/result', [FrontController::class, 'result'])->name('result');
+Route::get('/result/{token}', [FrontController::class, 'result'])->name('result');
 
 
 Auth::routes();
