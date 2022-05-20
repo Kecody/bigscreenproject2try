@@ -9,7 +9,7 @@ BigScreen - Questionnnaire
     <div class="card text-white bg-secondary p-2 my-3 mb-3 mx-auto " style="max-width: 30rem;">
         <div class="bg-dark m-2 p-3 rounded">
         <div class="card-header bg-dark">
-            <img class ="mx-auto mb-4 mt-3 p-3 rounded" src="{{asset('img/logo_bigscreen.png')}}" alt="logo bigscreen">
+            <img class ="mx-auto mb-4 mt-3 p-3 rounded fade-in-fade-out" src="{{asset('img/logo_bigscreen.png')}}" alt="logo bigscreen">
         <hr>
         <div class="card-body p-0">
         <h4 class="card-title pb-2 bold">Merci !!!</h4>

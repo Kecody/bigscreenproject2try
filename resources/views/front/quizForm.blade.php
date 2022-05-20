@@ -6,7 +6,7 @@
   
   @section('content')
     <div class="bg-dark my-4 py-3 px-5 rounded">
-      <img class ="mx-auto my-4" src="{{asset('img/logo_bigscreen.png')}}" alt="logo bigscreen">
+      <img class ="mx-auto my-4 fade-in-fade-out" src="{{asset('img/logo_bigscreen.png')}}" alt="logo bigscreen">
       <legend></legend>
       <h4 class ="my-4 text-center text-blue font-weight-bold ">Merci de répondre à toute les questions et de valider en fin de formulaire</h4>
       <form class ="bg-secondary px-4 py-3 rounded" method="POST" action="/message">
@@ -15,7 +15,7 @@
         <div>
           <p class="text-justify my-3 text-info">{{ $question->title }}</p>
         </div>
-        @if ($question->type=='a')
+        @if ($question->type=='A')
         <div>
           <label for="{{ $question->id }}" placeholder="Default input">{{ $question->description }}</label>
           <select name="{{ $question->id }}" id="{{ $question->id }}" class="form-select " aria-label="Floating label select example">
@@ -27,7 +27,7 @@
           </select>
         </div>
         <hr class ="bg-light ">
-        @elseif($question->type=='b')
+        @elseif($question->type=='B')
         <div>
           <label for="{{ $question->id }}" class="form-label">{{ $question->description }}</label>
           <input type="text" name="{{ $question->id }}" id="{{ $question->id }}" class="form-control">

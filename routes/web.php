@@ -37,7 +37,7 @@ Route::prefix('admin')->group(function(){
     
     Route::get('/home', [AdminController::class, 'graphdata'])->name('stats');
     
-    Route::get('/quiz', [AdminController::class, 'quiz'])->name('forms');
+    Route::get('/quiz', [AdminController::class, 'form'])->name('forms');
     
     Route::get('/questions', [AdminController::class, 'questions'])->name('form');
 
