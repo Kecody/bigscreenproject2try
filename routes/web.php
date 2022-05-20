@@ -17,6 +17,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/////////////////front routes
+
+Route::get('/form', [FrontController::class, 'form'])->name('form');
+
+Route::post('/message',[FrontController::class, 'message'])->name('message');
+
+Route::get('/result', [FrontController::class, 'result'])->name('result');
+
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/////////////////////admin
+Route::prefix('admin')->group(function(){
+
+    Route::get('/logged', [AdminController::class, 'logged'])->name('admin');
+    
+    Route::get('/home', [AdminController::class, 'graphdata'])->name('stats');
+    
+    Route::get('/quiz', [AdminController::class, 'quiz'])->name('forms');
+    
+    Route::get('/questions', [AdminController::class, 'questions'])->name('form');
+
+    Route::get('/answer_user', [AdminController::class, 'answersUsers'])->name('answer');
+
+});
