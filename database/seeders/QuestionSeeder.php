@@ -34,7 +34,7 @@ class QuestionSeeder extends Seeder
             'title' => 'Question 3/20',
             'description' => 'Votre sexe',
             'type'=>'A',
-            'choices'=>["Homme","Femme","Préfère de pas répondre"],
+            'choices'=>["Homme","Femme","Préfère ne pas répondre"],
             'form_id'=> 1
         ]);
 
