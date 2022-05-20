@@ -14,7 +14,7 @@ class AnswererFactory extends Factory
     public function definition()
     {
             return [
-                'token'=> $this->faker->unique(),
+                'user_token'=> $this->faker->md5(),
                 'user_email' => $this->faker->unique()->safeEmail(),
             ];
     }
