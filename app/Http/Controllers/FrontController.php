@@ -27,6 +27,7 @@ class FrontController extends Controller
         // dd($token);
         $answerer->save();
         //save answer in database
+        // dd($results);
         for($i=1;$i<count($results);$i++){
             $answer= new Answer();
             $answer->question_id= $i;
@@ -39,7 +40,7 @@ class FrontController extends Controller
     
     public function result(Request $request)
     {
-        $token = $request->user_token;
+        $token = $request->token;
         $user= Answerer::where('user_token', $token)->first();
         $answererId= $user->id;
         $questions= Question::all();

@@ -1,5 +1,5 @@
 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 text-white text-decoration-none">
-      <img class ="mx-auto" src="{{asset('img/logo_bigscreen.png')}}" alt="logo bigscreen">
+      <img class ="mx-auto px-2 w-100" src="{{asset('img/logo_bigscreen.png')}}" alt="logo bigscreen">
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">

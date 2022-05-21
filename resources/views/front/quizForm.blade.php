@@ -20,7 +20,7 @@
           <label for="{{ $question->id }}" placeholder="Default input">{{ $question->description }}</label>
           <select name="{{ $question->id }}" id="{{ $question->id }}" class="form-select " aria-label="Floating label select example">
             @foreach($question->choices as $choice)
-            <option value={{$choice}}>
+            <option value="{{$choice}}">
               {{$choice}}
             </option>
             @endforeach

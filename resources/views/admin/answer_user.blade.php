@@ -21,7 +21,7 @@ BigScreen - Administration
                         <tr>
                             <td>{{$answer->question_id}}</td>
                             <td class="label">{{$answer->question->description}}</td>
-                            <td>{{$answer->answers}}</td>
+                            <td>{{$answer->answer}}</td>
                             {{-- <td>{{$answer->answerers_access_token}}</td> --}}
                         </tr>
                         @endforeach

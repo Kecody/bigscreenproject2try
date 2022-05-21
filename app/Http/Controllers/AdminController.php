@@ -36,45 +36,48 @@ class AdminController extends Controller
      {
        // methode pour afficher le graphe de la question six
        // on store les différents réponses a la questions six dans un tableau quantity_six
+       
        $quantity_six = [
-         'Occulus Rift/s' => 0,
-         'HTC Vive' => 0, 
-         'Windows Mixed Reality' => 0, 
-         'PSVR' => 0
+         env('APP_OCCULUS_RIFTS')=>0,
+         env('APP_HTC_VIVE')=>0,
+         env('APP_WINDOWS_MIXED_REALITY')=>0,
+         env('APP_PSVR')=>0
        ];
-       // récupèr l'id de la question six et dans un foreach on store les différents réponses des utilisateurs
-       // ceci permet en même temps de faire le compte de chaque réponse de la question six 
-         $result_six = Answer::where('question_id','6')->get();                  
+       
+         $result_six = Answer::where('question_id', 6)->get();
+        //              
          foreach($result_six as $value){
-           $quantity_six[$value->answer]++;
+          // dump($value->answer);
+          $quantity_six[$value->answer]++; 
          }
+        //  dump($quantity_six);
+        //  dd($result_six); 
    
        // on store les différents réponses a la questions sept dans un tableau quantity_seven
        $quantity_seven = [
-         'SteamVR' => 0,
-         'Occulus store' => 0,
-         'Viveport' => 0, 
-         'Playstation VR' => 0, 
-         'Google Play' => 0,
-         'Windows store' => 0 
+          env('APP_STEAM_VR')=>0,
+          env('APP_OCCULUS_STORE')=>0,
+          env('APP_VIVEPORT')=>0,
+          env('APP_PLAYSTATION_VR')=>0,
+          env('APP_GOOGLE_PLAY')=>0,
+          env('APP_WINDOWS_STORE')=>0
        ];
        // récupèr l'id de la question sept et dans un foreach on store les différents réponses des utilisateurs
        // ceci permet en même temps de faire le compte de chaque réponse de la question sept
-         $res = Answer::where('question_id','7')->get();                  
+         $res = Answer::where('question_id',7)->get();                  
          foreach($res as $val){
            $quantity_seven[$val->answer]++;
          }
-   
        // on store les différents réponses a la questions dix dans un tableau quantity_ten
        $quantity_ten = [
-         'regarder des émissions TV en direct' => 0,
-         'regarder des films' => 0,
-         'jouer en solo' => 0, 
-         'jouer en team' => 0
+        env('APP_WATCH_TV')=>0,
+        env('APP_WATCH_FILM')=>0,
+        env('APP_PLAYSOLO')=>0,
+        env('APP_PLAYTEAM')=>0
        ];
        // récupèr l'id de la question dix et dans un foreach on store les différents réponses des utilisateurs
        // ceci permet en même temps de faire le compte de chaque réponse de la question dix
-         $res = Answer::where('question_id','10')->get();                  
+         $res = Answer::where('question_id', 10)->get();                  
          foreach($res as $val){
            $quantity_ten[$val->answer]++;
          }
@@ -89,7 +92,7 @@ class AdminController extends Controller
        ];
        // récupèr l'id de la question onze et dans un foreach on store les différents réponses des utilisateurs
        // ceci permet en même temps de faire le compte de chaque réponse de la question onze
-         $res = Answer::where('question_id','11')->get();                  
+         $res = Answer::where('question_id',11)->get();                  
          foreach($res as $val){
            $quantity_eleven[$val->answer]++;
          }
@@ -104,7 +107,7 @@ class AdminController extends Controller
        ];
        // récupèr l'id de la question douze et dans un foreach on store les différents réponses des utilisateurs
        // ceci permet en même temps de faire le compte de chaque réponse de la question douze
-         $res = Answer::where('question_id','12')->get();                  
+         $res = Answer::where('question_id',12)->get();                  
          foreach($res as $val){
            $quantity_twelve[$val->answer]++;
          }
@@ -119,7 +122,7 @@ class AdminController extends Controller
        ];
        // récupèr l'id de la question treize et dans un foreach on store les différents réponses des utilisateurs
        // ceci permet en même temps de faire le compte de chaque réponse de la question treize
-         $res = Answer::where('question_id','13')->get();                  
+         $res = Answer::where('question_id',13)->get();                  
          foreach($res as $val){
            $quantity_thirteen[$val->answer]++;
          }
@@ -134,7 +137,7 @@ class AdminController extends Controller
        ];
        // récupère l'id de la question quartorze et dans un foreach on store les différents réponses des utilisateurs
        // ceci permet en même temps de faire le compte de chaque réponse de la question quartorce
-         $res = Answer::where('question_id','14')->get();                  
+         $res = Answer::where('question_id',14)->get();                  
          foreach($res as $val){
            $quantity_fourteen[$val->answer]++;
          }
@@ -154,7 +157,9 @@ class AdminController extends Controller
            $quantity_fifteen[$val->answer]++;
          }
    
-         $totalResult = [
+     
+       // on fait appel aux resultat sur la vue home
+       return view('admin.home',[
          'quantity_six' => $quantity_six,
          'quantity_seven' => $quantity_seven,
          'quantity_ten' => $quantity_ten,
@@ -162,12 +167,7 @@ class AdminController extends Controller
          'quantity_twelve' => $quantity_twelve,
          'quantity_thirteen' => $quantity_thirteen,
          'quantity_fourteen' => $quantity_fourteen,
-         'quantity_fifteen' => $quantity_fifteen
-         ];
-
-
-       // on fait appel aux resultat sur la vue home
-       return view('admin.home',[$totalResult]);
+         'quantity_fifteen' => $quantity_fifteen]);
      }
        
     //////////////////////\\\\\\\\\\\\\\\\\\\\\\\
