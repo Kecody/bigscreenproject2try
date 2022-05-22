@@ -35,26 +35,26 @@ class AdminController extends Controller
 
      public function graphdata(Request $request)
      {
-       // methode pour afficher le graphe de la question six
-       // on store les différents réponses a la questions six dans un tableau quantity_six
-       
+       // Méthode pour afficher chaques graphes 6 7 10
+       // On ajoute les réponses sous le format .env, cela évite le hard-coding de notre questionnaire dans un tableau
+       ///pie-chart 6
        $quantity_six = [
          env('APP_OCCULUS_RIFTS')=>0,
          env('APP_HTC_VIVE')=>0,
          env('APP_WINDOWS_MIXED_REALITY')=>0,
          env('APP_PSVR')=>0
        ];
-       
+        //On récupère des questions et dans un foreach on store les différents réponses des utilisateurs
+        //ceci permet en même temps de faire le compte de chaque réponse de la question dix
          $result_six = Answer::where('question_id', 6)->get();
-        //              
-         foreach($result_six as $value){
-          // dump($value->answer);
-          $quantity_six[$value->answer]++; 
+                   
+         foreach($result_six as $valueSix){
+        
+          $quantity_six[$valueSix->answer]++; 
          }
-        //  dump($quantity_six);
-        //  dd($result_six); 
+        
    
-       // on store les différents réponses a la questions sept dans un tableau quantity_seven
+      ///pie-chart 7
        $quantity_seven = [
           env('APP_STEAM_VR')=>0,
           env('APP_OCCULUS_STORE')=>0,
@@ -63,27 +63,28 @@ class AdminController extends Controller
           env('APP_GOOGLE_PLAY')=>0,
           env('APP_WINDOWS_STORE')=>0
        ];
-       // récupèr l'id de la question sept et dans un foreach on store les différents réponses des utilisateurs
-       // ceci permet en même temps de faire le compte de chaque réponse de la question sept
-         $res = Answer::where('question_id',7)->get();                  
-         foreach($res as $val){
-           $quantity_seven[$val->answer]++;
+       
+       $result_seven = Answer::where('question_id',7)->get();                  
+         foreach($result_seven as $valueSeven){
+           $quantity_seven[$valueSeven->answer]++;
          }
-       // on store les différents réponses a la questions dix dans un tableau quantity_ten
+       ///pie-chart 10
        $quantity_ten = [
         env('APP_WATCH_TV')=>0,
         env('APP_WATCH_FILM')=>0,
         env('APP_PLAYSOLO')=>0,
         env('APP_PLAYTEAM')=>0
        ];
-       // récupèr l'id de la question dix et dans un foreach on store les différents réponses des utilisateurs
-       // ceci permet en même temps de faire le compte de chaque réponse de la question dix
-         $res = Answer::where('question_id', 10)->get();                  
-         foreach($res as $val){
-           $quantity_ten[$val->answer]++;
+      
+       // Récupération de l'ID question, on ajoute les différentes réponses des utilisateurs
+       // On compte toute les réponses de la question 14
+       // On utilise cette méthode pour chaques question dont à besoin pour nos graphes
+       $result_ten = Answer::where('question_id', 10)->get();                  
+         foreach($result_ten as $valueTen){
+           $quantity_ten[$valueTen->answer]++;
          }
    
-       // on store les différents réponses a la questions onze dans un tableau quantity_eleven
+       ///radar-chart 1.11
        $quantity_eleven = [
          '1' => 0,
          '2' => 0,
@@ -91,14 +92,14 @@ class AdminController extends Controller
          '4' => 0,
          '5' => 0
        ];
-       // récupèr l'id de la question onze et dans un foreach on store les différents réponses des utilisateurs
-       // ceci permet en même temps de faire le compte de chaque réponse de la question onze
-         $res = Answer::where('question_id',11)->get();                  
-         foreach($res as $val){
-           $quantity_eleven[$val->answer]++;
+      
+
+       $result_eleven = Answer::where('question_id',11)->get();                  
+         foreach($result_eleven as $valueEleven){
+           $quantity_eleven[$valueEleven->answer]++;
          }
    
-       // on store les différents réponses a la questions douze dans un tableau quantity_twelve
+      ///radar-chart 1.12
        $quantity_twelve = [
          '1' => 0,
          '2' => 0,
@@ -106,14 +107,13 @@ class AdminController extends Controller
          '4' => 0,
          '5' => 0
        ];
-       // récupèr l'id de la question douze et dans un foreach on store les différents réponses des utilisateurs
-       // ceci permet en même temps de faire le compte de chaque réponse de la question douze
-         $res = Answer::where('question_id',12)->get();                  
-         foreach($res as $val){
-           $quantity_twelve[$val->answer]++;
+       
+       $result_twelve = Answer::where('question_id',12)->get();                  
+         foreach($result_twelve as $valueTwelve){
+           $quantity_twelve[$valueTwelve->answer]++;
          }
    
-       // on store les différents réponses a la questions treize dans un tableau quantity_thirteen
+       ///radar-chart 1.13
        $quantity_thirteen = [
          '1' => 0,
          '2' => 0,
@@ -121,14 +121,13 @@ class AdminController extends Controller
          '4' => 0,
          '5' => 0
        ];
-       // récupèr l'id de la question treize et dans un foreach on store les différents réponses des utilisateurs
-       // ceci permet en même temps de faire le compte de chaque réponse de la question treize
-         $res = Answer::where('question_id',13)->get();                  
-         foreach($res as $val){
-           $quantity_thirteen[$val->answer]++;
+       
+       $result_thirteen = Answer::where('question_id',13)->get();                  
+         foreach($result_thirteen as $valueThirteen){
+           $quantity_thirteen[$valueThirteen->answer]++;
          }
    
-       // on store les différents réponses a la questions quartorce dans un tableau quantity_fourteen
+       ///radar-chart 1.14
        $quantity_fourteen = [
          '1' => 0,
          '2' => 0,
@@ -136,14 +135,12 @@ class AdminController extends Controller
          '4' => 0,
          '5' => 0
        ];
-       // récupère l'id de la question quartorze et dans un foreach on store les différents réponses des utilisateurs
-       // ceci permet en même temps de faire le compte de chaque réponse de la question quartorce
-         $res = Answer::where('question_id',14)->get();                  
-         foreach($res as $val){
-           $quantity_fourteen[$val->answer]++;
+       
+       $result_fourteen = Answer::where('question_id',14)->get();                  
+         foreach($result_fourteen as $valueFourteen){
+           $quantity_fourteen[$valueFourteen->answer]++;
          }
-   
-       // on store les différents réponses a la questions quinze dans un tableau quantity_fifteen
+       ///radar-chart 1.15
        $quantity_fifteen = [
          '1' => 0,
          '2' => 0,
@@ -151,14 +148,13 @@ class AdminController extends Controller
          '4' => 0,
          '5' => 0
        ];
-       // récupèr l'id de la question quinze et dans un foreach on store les différents réponses des utilisateurs
-       // ceci permet en même temps de faire le compte de chaque réponse de la question quinze
-         $res = Answer::where('question_id','15')->get();                  
-         foreach($res as $val){
-           $quantity_fifteen[$val->answer]++;
+       
+       $result_fifteen = Answer::where('question_id','15')->get();                  
+         foreach($result_fifteen as $valueFifteen){
+           $quantity_fifteen[$valueFifteen->answer]++;
          }
    
-       // on fait appel aux resultat sur la vue home
+       // On retourne la totalité de nos réponses notre view HOME
        return view('admin.home',[
          'quantity_six' => $quantity_six,
          'quantity_seven' => $quantity_seven,
@@ -176,6 +172,7 @@ class AdminController extends Controller
 
     public function questions()
     {
+      ///integration des question dans mon controller
         $questions = Question::get();
         $questionsData = [];
         foreach ($questions as $question) {
@@ -193,6 +190,7 @@ class AdminController extends Controller
     ////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\
     public function answersUsers()
     {
+        //integration des answerer question et answer dans mon controller
         return view('admin.answer_user', 
         ['questions'=> Question::all()],
         ['answerers'=> Answerer::all()],

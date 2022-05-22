@@ -19,8 +19,10 @@ class FrontController extends Controller
         //         return view('front.quizForm', ['questions' => $form-> questions]);
         //     }
         //         return view('front.quizForm', ['questions' => []]);
-        $tokenForm = "XeoQJso1qWdj1DTPGI8nO1PSKP3ZYMEUYJwd0ngh";
         
+        // on ajoute le lien du token
+        $tokenForm = "XeoQJso1qWdj1DTPGI8nO1PSKP3ZYMEUYJwd0ngh";
+        // on ajoute nos question et notre token au controller
         return view('front.quizForm', ['questions' => Question::all()], 
         ['formtoken'=> $tokenForm]);
     }
@@ -30,15 +32,14 @@ class FrontController extends Controller
         $results= $request->all();
         $email= $results[1];
         $token= Str::random(32);
-        //save surveyed data in database
+        //Sauvegarde des répondants
         $answerer= new Answerer();
         $answerer->user_email= $email;
         $answerer->user_token= $token;
         $answerer->status = true;
-        // dd($token);
         $answerer->save();
-        //save answer in database
-        // dd($results);
+        
+        //Sauvegarde des réponses 
         for($i=1;$i<count($results);$i++){
             $answer= new Answer();
             $answer->question_id= $i;
@@ -51,6 +52,7 @@ class FrontController extends Controller
     
     public function result(Request $request)
     {
+        //Récupération des réponses par le token de notre répondant
         $token = $request->token;
         $user= Answerer::where('user_token', $token)->first();
         $answererId= $user->id;

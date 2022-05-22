@@ -15,6 +15,7 @@ class FormSeeder extends Seeder
      */
     public function run()
     {
+        //integrations des formulaires
         Form::create([
             'title'=>'Bigscreen',
             'description'=>'Sondage casque de réalité virtuel',

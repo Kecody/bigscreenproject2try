@@ -3,7 +3,7 @@
 @section('title')
 BigScreen - Administration
 @endsection
-
+{{--Page vous êtes connecté--}}
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

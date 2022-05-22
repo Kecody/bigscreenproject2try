@@ -1,3 +1,5 @@
+/* front CSS */
+
 img {
     max-width: 300px;
     display: flex;
@@ -25,11 +27,14 @@ label, p{
 .text-info{
     font-weight: bold;
 }
+
 hr {
     margin: 1.5rem 0 !important;
     /* color:#49b2b1 !important; */
     height: 3px!important;
 }
+
+/* effet css */
 .fade-in {
     animation-name: FadeIn;
     animation-duration: 5s;

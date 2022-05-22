@@ -11,7 +11,7 @@ class QuestionSeeder extends Seeder
      * Run the database seeds.
      *
      * @return void
-     */
+     */ ///integration des questions dans les seeder
     public function run()
     {
         Question::create([

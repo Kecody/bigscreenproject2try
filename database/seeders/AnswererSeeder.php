@@ -14,6 +14,8 @@ class AnswererSeeder extends Seeder
      */
     public function run()
     {
+        ///integration de repondants automatique en cours
+        
         // Answerer::factory()->count(20)->create();  
     }
     

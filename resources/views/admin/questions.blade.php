@@ -3,7 +3,7 @@
 @section('title')
 BigScreen - Administration
 @endsection
-
+{{--Page de toutes les questions du formulaire BIGSCREEN--}}
 @section('content')
     <div class="d-flex align-items-center justify-content-center vh-50">
         <div class="card-body text-white bg-secondary my-3 mb-3 mx-auto rounded " style="max-width: 60rem;">
@@ -14,6 +14,7 @@ BigScreen - Administration
                     <th>Type</th>
                 </thead>
                 <tbody>
+                    {{--On boucle sur tous les questions du formulaire concerné--}}
                     @foreach ($questions as $question)
                         <tr>
                             <td class ="table-dark text-info">{{$question['nth']}}</td>

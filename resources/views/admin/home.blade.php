@@ -3,7 +3,7 @@
 @section('title')
 BigScreen - Administration
 @endsection
-
+{{--Page de tous mes graphiques--}}
 @section('content')
     <div class= " d-flex row align-items-center justify-content-center card-body text-white mx-auto vh-100">
             <div class =" d-flex col-4 graph m-2 ">
@@ -23,10 +23,10 @@ BigScreen - Administration
     
     
     
-    {{-- Partie graphique--}}
+    {{-- Partie graph--}}
     {{--//////////////////////SCRIPT\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\--}}
     <script>
-
+        //On recupere nos id et on les stocke dans une constante pour les afficher dans la view
         const pie6 = document.getElementById('pie-6');
         const pie7 = document.getElementById('pie-7');
         const pie10 = document.getElementById('pie-10');
@@ -48,7 +48,7 @@ BigScreen - Administration
             'rgba(5, 60, 78, 0.8)',
             'rgba(3, 41, 54, 0.8)'
             ],
-            
+            //on stocke nos data dans un tableau
             data: [
                 {{$quantity_six['Occulus Rift/s']}}, 
                 {{$quantity_six['HTC Vive']}}, 
@@ -57,6 +57,7 @@ BigScreen - Administration
             ],
             }]
         };
+        //on parametre le design de notre chart
         const configPieSix = {
             type: 'pie',
             data: data,
@@ -79,6 +80,7 @@ BigScreen - Administration
                 }
             } 
         };
+        //on créer notre nouvelle chart avec les paramètres
         const chart_six = new Chart(pie6, configPieSix);
             
         

@@ -16,6 +16,8 @@ class AnswerSeeder extends Seeder
      */
     public function run()
     {
+        ///integration de réponse automatique en cours
+        
         // $faker = \Faker\Factory::create();
         // $answerers = Answerer::all();
         // $questions = Question::all();
