@@ -18,7 +18,7 @@
         @if ($question->type=='A')
         <div>
           <label for="{{ $question->id }}" placeholder="Default input">{{ $question->description }}</label>
-          <select name="{{ $question->id }}" id="{{ $question->id }}" class="form-select " aria-label="Floating label select example">
+          <select name="{{ $question->id }}" id="{{ $question->id }}" class="form-select " aria-label="Floating label select example" required>
             @foreach($question->choices as $choice)
             <option value="{{$choice}}">
               {{$choice}}
@@ -30,7 +30,7 @@
         @elseif($question->type=='B')
         <div>
           <label for="{{ $question->id }}" class="form-label">{{ $question->description }}</label>
-          <input type="text" name="{{ $question->id }}" id="{{ $question->id }}" class="form-control">
+          <input type="text" name="{{ $question->id }}" id="{{ $question->id }}" class="form-control" required>
         </div>
         <hr class ="bg-light ">
         @else
@@ -40,7 +40,7 @@
           <div class="form-check form-check-inline">
             <label for="{{ $question->id }}">{{$i}}</label>
             <input type="radio" id="{{ $question->id }}"
-            name="{{ $question->id }}" value="{{$i}}">
+            name="{{ $question->id }}" value="{{$i}}" required>
           </div>
           @endfor
         </div>
