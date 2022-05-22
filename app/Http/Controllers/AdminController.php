@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Form;
 use App\Models\Answer;
+use App\Models\Answerer;
 use App\Models\Question;
 use Illuminate\Http\Request;
 
@@ -194,7 +195,8 @@ class AdminController extends Controller
     {
         return view('admin.answer_user', 
         ['questions'=> Question::all()],
-        ['answers'=> Answer::orderBy('created_at', 'desc')->get()]);
+        ['answerers'=> Answerer::all()],
+        ['answers'=> Answer::where('answerer_id')->orderBy('created_at', 'DESC')->get()]);
         // dd($answersData);
         
     }   
