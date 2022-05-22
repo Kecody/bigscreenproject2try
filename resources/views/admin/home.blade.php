@@ -64,7 +64,7 @@ BigScreen - Administration
                 plugins:{
                     title: {
                         display: true,
-                        text: 'Marque de casque',
+                        text: 'Marque de casques',
                         color: 'rgba(255,255,255,0.8)',
                         padding: {
                              bottom: 20  
