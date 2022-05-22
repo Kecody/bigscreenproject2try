@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Form;
 use App\Models\Answer;
 use App\Models\Answerer;
 use App\Models\Question;
@@ -11,10 +12,19 @@ use Illuminate\Http\Request;
 class FrontController extends Controller
 {
     public function form()
-    {
-        //
-        return view('front.quizForm', ['questions' => Question::all()]);
+    {   
+        // $request->get();
+        // 
+        //     if ($form) {
+        //         return view('front.quizForm', ['questions' => $form-> questions]);
+        //     }
+        //         return view('front.quizForm', ['questions' => []]);
+        $tokenForm = "XeoQJso1qWdj1DTPGI8nO1PSKP3ZYMEUYJwd0ngh";
+        
+        return view('front.quizForm', ['questions' => Question::all()], 
+        ['formtoken'=> $tokenForm]);
     }
+    
     public function message(Request $request)
     {
         $results= $request->all();

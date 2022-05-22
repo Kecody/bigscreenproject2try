@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 /////////////////front routes
 
-Route::get('/form', [FrontController::class, 'form'])->name('form');
+Route::get('/form/{formtoken}', [FrontController::class, 'form'])->name('form');
 
 Route::post('/message',[FrontController::class, 'message'])->name('message');
 

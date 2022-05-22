@@ -4,14 +4,6 @@
 BigScreen - Administration
 @endsection
 
-{{-- @push('head')
-<!-- Scripts -->
-<script>   
-    let graphData = ;
-</script>
-
-@endpush --}}
-
 @section('content')
     <div class= " d-flex row align-items-center justify-content-center card-body text-white mx-auto vh-100">
             <div class =" d-flex col-4 graph m-2 ">
@@ -27,11 +19,14 @@ BigScreen - Administration
                 <canvas class ="w-100 m-2" id="radar"></canvas>
             </div>
     </div>
-   
-    {{-- <canvas id="myChart" width="400" height="400"></canvas> --}}
 
+    
+    
+    
+    {{-- Partie graphique--}}
     {{--//////////////////////SCRIPT\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\--}}
     <script>
+
         const pie6 = document.getElementById('pie-6');
         const pie7 = document.getElementById('pie-7');
         const pie10 = document.getElementById('pie-10');
@@ -62,7 +57,7 @@ BigScreen - Administration
             ],
             }]
         };
-        const config = {
+        const configPieSix = {
             type: 'pie',
             data: data,
             options: {
@@ -84,7 +79,7 @@ BigScreen - Administration
                 }
             } 
         };
-        const chart_six = new Chart(pie6, config);
+        const chart_six = new Chart(pie6, configPieSix);
             
         
         const value = [
@@ -118,7 +113,7 @@ BigScreen - Administration
             ],
             }]
         }; 
-        const confi = {
+        const configPieSeven = {
             type: 'pie',
             data: base,
             options: {
@@ -140,7 +135,7 @@ BigScreen - Administration
                 }
             } 
         };
-        const chart_seven = new Chart(pie7, confi);
+        const chart_seven = new Chart(pie7, configPieSeven);
         
         const container = [
             'regarder des émissions TV en direct',
@@ -167,7 +162,7 @@ BigScreen - Administration
             ],
             }]
         }; 
-        const conf = {
+        const configPieTen = {
             type: 'pie',
             data: dat,
             options: {
@@ -190,7 +185,7 @@ BigScreen - Administration
             } 
             
         };
-        const chart_ten = new Chart(pie10, conf);
+        const chart_ten = new Chart(pie10, configPieTen);
         const bas = {
        
         labels: ['1','2','3','4','5'],
@@ -256,7 +251,7 @@ BigScreen - Administration
             
           }]
         };
-        const con = {
+        const configRad = {
             type: 'radar',
             data: bas,
             options: {
@@ -294,7 +289,7 @@ BigScreen - Administration
                 }
             } 
         };
-        const rad = new Chart(radar, con);
+        const rad = new Chart(radar, configRad);
         </script>
     
 
