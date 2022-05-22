@@ -15,7 +15,7 @@ BigScreen - Administration
 @section('content')
     <div class= " d-flex row align-items-center justify-content-center card-body text-white mx-auto vh-100">
             <div class =" d-flex col-4 graph m-2 ">
-                <canvas class ="w-100 m-2" id="pie-6"></canvas>
+                    <canvas class ="w-100 m-2" id="pie-6"></canvas>
             </div>
             <div class =" d-flex col-4 graph m-2 ">
                 <canvas class =" w-100 m-2" id="pie-7"></canvas>
@@ -34,7 +34,6 @@ BigScreen - Administration
 
     
 <script>
-    
     const pie6 = document.getElementById('pie-6');
     const pie7 = document.getElementById('pie-7');
     const pie10 = document.getElementById('pie-10');
@@ -51,10 +50,10 @@ BigScreen - Administration
         datasets: [{
         label: 'Marque de casque',
         backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
-        'rgb(255, 25, 41)'
+        'rgba(48, 113, 134, 0.8)',
+        'rgba(47, 157, 195, 0.8)',
+        'rgba(5, 60, 78, 0.8)',
+        'rgba(3, 41, 54, 0.8)'
         ],
         
         data: [
@@ -68,6 +67,24 @@ BigScreen - Administration
     const config = {
         type: 'pie',
         data: data,
+        options: {
+            plugins:{
+                title: {
+                    display: true,
+                    text: 'Marque de casque',
+                    color: 'rgba(255,255,255,0.8)',
+                    padding: {
+                         bottom: 20  
+                    }
+                },
+                legend:{
+                    labels:{
+                       color:'white'
+                    },
+                    position: 'bottom'
+                }
+            }
+        } 
     };
     const chart_six = new Chart(pie6, config);
         
@@ -83,14 +100,14 @@ BigScreen - Administration
     const base = {
         labels: value,
         datasets: [{
-        label: '',
+        label: 'Applications VR',
         backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
-        'rgb(255, 25, 41)',
-        'rgb(127, 255, 212)',
-        'rgb(0, 128, 0)',
+        'rgba(48, 113, 134, 0.8)',
+        'rgba(47, 157, 195, 0.8)',
+        'rgba(5, 60, 78, 0.8)',
+        'rgba(3, 41, 54, 0.8)',
+        'rgba(40, 69, 78, 0.8)',
+        'rgba(0, 129, 171, 0.8)',
         ],
         
         data: [
@@ -106,6 +123,24 @@ BigScreen - Administration
     const confi = {
         type: 'pie',
         data: base,
+        options: {
+            plugins:{
+                title: {
+                    display: true,
+                    text: 'Application VR',
+                    color: 'rgba(255,255,255,0.8)',
+                    padding:{
+                         bottom:20 
+                    }
+                },
+                legend:{
+                    labels:{
+                       color:'white'
+                    },
+                    position: 'bottom'
+                }
+            }
+        } 
     };
     const chart_seven = new Chart(pie7, confi);
     
@@ -118,12 +153,12 @@ BigScreen - Administration
     const dat = {
         labels: container,
         datasets: [{
-        label: '',
+        label: 'Utilisation',
         backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
-        'rgb(255, 25, 41)'
+        'rgba(5, 60, 78, 0.8)',
+        'rgba(3, 41, 54, 0.8)',
+        'rgba(40, 69, 78, 0.8)',
+        'rgba(0, 129, 171, 0.8)'
         ],
         
         data: [
@@ -137,6 +172,25 @@ BigScreen - Administration
     const conf = {
         type: 'pie',
         data: dat,
+        options: {
+            plugins:{
+                title: {
+                    display: true,
+                    text: 'Utilisation',
+                    color: 'rgba(255,255,255,0.8)',
+                    padding:{
+                         bottom: 20  
+                    }
+                },
+                legend:{
+                    labels:{
+                       color:'white'
+                    },
+                    position: 'bottom'
+                }
+            }
+        } 
+        
     };
     const chart_ten = new Chart(pie10, conf);
     const bas = {
@@ -153,7 +207,7 @@ BigScreen - Administration
                 {{$quantity_eleven['5']}}
             ],
         fill: true,
-        backgroundColor: 'rgba(255, 99, 132)',
+        backgroundColor: 'rgba(48, 113, 134, 0.4)',
     
       }, {
         label: 'Twelve',
@@ -165,7 +219,7 @@ BigScreen - Administration
                 {{$quantity_twelve['5']}}
             ],
         fill: true,
-        backgroundColor: 'rgba(54, 162, 235)',
+        backgroundColor: 'rgba(47, 157, 195, 0.4)',
       }, {
         label: 'Thirteen',
         data: [
@@ -176,7 +230,7 @@ BigScreen - Administration
                 {{$quantity_thirteen['5']}}
             ],
         fill: true,
-        backgroundColor: 'rgba(255, 205, 86)',
+        backgroundColor:  'rgba(5, 60, 78, 0.4)',
       }, {
         label: 'Fourteen',
         data: [
@@ -187,7 +241,7 @@ BigScreen - Administration
                 {{$quantity_fourteen['5']}}
             ],
         fill: true,
-        backgroundColor: 'rgba(255, 25, 41)',
+        backgroundColor: 'rgba(3, 41, 54, 0.4)',
        
       }, {
         label: 'Fifteen',
@@ -200,7 +254,7 @@ BigScreen - Administration
                 {{$quantity_fifteen['5']}}
             ],
         fill: true,
-        backgroundColor: 'rgba(127, 255, 212)',
+        backgroundColor: 'rgba(40, 69, 78, 0.4)',
         
       }]
     };
@@ -208,12 +262,39 @@ BigScreen - Administration
         type: 'radar',
         data: bas,
         options: {
-            elements: {
-              line: {
-                borderWidth: 3
-              }
+            layout:{
+                padding:{
+                    bottom:15
+                }
+            },
+            plugins:{
+                title: {
+                    display: true,
+                    text: 'Notes Globales',
+                    color: 'rgba(255,255,255,0.8)',
+                    fullSize:true,
+                    padding:{
+                         bottom: 10  
+                    }
+                },
+                legend:{
+                    labels:{
+                       color:'white'
+                    },
+                    position: 'bottom',
+                },
+            },
+            scales: {
+                r: {
+                    grid: {
+                        color:'white'
+                    },
+                    angleLines: {
+                        color:'rgb(73, 178, 177)'
+                    }
+                }
             }
-          },
+        } 
     };
     const rad = new Chart(radar, con);
     </script>

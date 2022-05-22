@@ -12,6 +12,7 @@ class FrontController extends Controller
 {
     public function form()
     {
+        //
         return view('front.quizForm', ['questions' => Question::all()]);
     }
     public function message(Request $request)

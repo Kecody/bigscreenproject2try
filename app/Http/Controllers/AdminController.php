@@ -157,7 +157,6 @@ class AdminController extends Controller
            $quantity_fifteen[$val->answer]++;
          }
    
-     
        // on fait appel aux resultat sur la vue home
        return view('admin.home',[
          'quantity_six' => $quantity_six,
