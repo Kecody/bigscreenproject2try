@@ -31,15 +31,16 @@ BigScreen - Administration
         const pie7 = document.getElementById('pie-7');
         const pie10 = document.getElementById('pie-10');
         const radar = document.getElementById('radar');
-        
-        const labels = [
+        //pie6
+        const valueSix = [
             'Occulus Rift/s',
             'HTC Vive',
             'Windows Mixed Reality',
             'PSVR',
         ];
+        //on paramètre le design(couleur) de nos labels
         const data = {
-            labels: labels,
+            labels: valueSix,
             datasets: [{
             label: 'Marque de casque',
             backgroundColor: [
@@ -57,7 +58,7 @@ BigScreen - Administration
             ],
             }]
         };
-        //on parametre le design de notre chart
+        //on parametre le design global de notre chart
         const configPieSix = {
             type: 'pie',
             data: data,
@@ -83,8 +84,8 @@ BigScreen - Administration
         //on créer notre nouvelle chart avec les paramètres
         const chart_six = new Chart(pie6, configPieSix);
             
-        
-        const value = [
+        //pie7
+        const valueSeven = [
             'SteamVR',
             'Occulus store',
             'Viveport',
@@ -92,8 +93,9 @@ BigScreen - Administration
             'Google Play',
             'Windows store'
         ];
-        const base = {
-            labels: value,
+        
+        const dataSeven = {
+            labels: valueSeven,
             datasets: [{
             label: 'Applications VR',
             backgroundColor: [
@@ -115,9 +117,10 @@ BigScreen - Administration
             ],
             }]
         }; 
+        
         const configPieSeven = {
             type: 'pie',
-            data: base,
+            data: dataSeven,
             options: {
                 plugins:{
                     title: {
@@ -138,15 +141,16 @@ BigScreen - Administration
             } 
         };
         const chart_seven = new Chart(pie7, configPieSeven);
-        
-        const container = [
+        //pie10
+        const valueTen = [
             'regarder des émissions TV en direct',
             'regarder des films',
             'jouer en solo',
             'jouer en team'
         ];
-        const dat = {
-            labels: container,
+        
+        const dataTen = {
+            labels: valueTen,
             datasets: [{
             label: 'Utilisation',
             backgroundColor: [
@@ -164,9 +168,10 @@ BigScreen - Administration
             ],
             }]
         }; 
+        
         const configPieTen = {
             type: 'pie',
-            data: dat,
+            data: dataTen,
             options: {
                 plugins:{
                     title: {
@@ -188,7 +193,8 @@ BigScreen - Administration
             
         };
         const chart_ten = new Chart(pie10, configPieTen);
-        const bas = {
+        //Radar
+        const valueRadar = {
        
         labels: ['1','2','3','4','5'],
           datasets: [{
@@ -255,7 +261,7 @@ BigScreen - Administration
         };
         const configRad = {
             type: 'radar',
-            data: bas,
+            data: valueRadar,
             options: {
                 layout:{
                     padding:{
