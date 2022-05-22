@@ -9,7 +9,7 @@
       <img class ="mx-auto my-4 fade-in-fade-out" src="{{asset('img/logo_bigscreen.png')}}" alt="logo bigscreen">
       <legend></legend>
       <h4 class ="my-4 text-center text-blue font-weight-bold ">Merci de répondre à toute les questions et de valider en fin de formulaire</h4>
-      <form class ="bg-secondary px-4 py-3 rounded" method="POST" action="/message">
+      <form class ="bg-secondary px-4 py-3 rounded" method="POST" action="/message" aria-required="true">
         @csrf
         @foreach ($questions as $question)
         <div>

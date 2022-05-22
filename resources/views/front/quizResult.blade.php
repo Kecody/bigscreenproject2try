@@ -5,7 +5,7 @@ BigScreen - Questionnnaire
 @endsection
 
 @section('content')
-<div class="card-header mb-2 py-3">
+<div class="" mx-0 mb-2 bg-dark py-3">
     <img class ="mx-auto mb-4 mt-3 fade-in-fade-out" src="{{asset('img/logo_bigscreen.png')}}" alt="logo bigscreen">
     <p class ="date text-blue text-center" >Vous trouverez ci-dessous les réponses que vous avez apportées à notre sondage le "{{$answers[0]->created_at}}"</p>
 </div>        

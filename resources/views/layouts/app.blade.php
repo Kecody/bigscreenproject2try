@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app">
-        @include('incs.navlogin')
+        {{-- @include('incs.navlogin') --}}
         <main class="py-4">
             @yield('content')
         </main>
