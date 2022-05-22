@@ -17,7 +17,7 @@ BigScreen - Administration
                 @foreach($forms as $form)
                 <tbody>
                         <tr>
-                            <td>{{$form->title}}</td>
+                            <td class ="text-info">{{$form->title}}</td>
                             <td class="label">{{$form->description}}</td>
                             <td class="label">{{$form->id}}</td>
                         </tr>
