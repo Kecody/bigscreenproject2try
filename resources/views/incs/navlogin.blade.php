@@ -1,3 +1,4 @@
+{{--navlogin--}}
 <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
     <div class="container">
         <a class="navbar-brand hidden" href="{{ url('/') }}">

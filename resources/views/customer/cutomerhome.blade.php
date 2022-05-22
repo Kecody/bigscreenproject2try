@@ -3,7 +3,7 @@
 @section('title')
     BigScreen - CUSTOMER
 @endsection
-
+{{--page  client en cours--}}
 @section('content')
 <div class="d-flex align-items-center justify-content-center vh-100">
     <div class="card text-white bg-secondary p-2 my-3 mb-3 mx-auto " style="max-width: 30rem;">
