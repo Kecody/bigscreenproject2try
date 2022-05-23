@@ -18,11 +18,11 @@
 *
 **<p>//////ajouter-ca au .env.exemple////</p>
     <ul>     
-           <li>||</li>  
-           <li>||</li> 
-          <li>_||_</li> 
-          <li>\  /</li> 
-           <li>\/</li> 
+           <li style ="list-style-type:none">||</li>  
+           <li style ="list-style-type:none">||</li> 
+          <li style ="list-style-type:none">_||_</li> 
+          <li style ="list-style-type:none">\  /</li> 
+           <li style ="list-style-type:none">\/</li> 
     </ul>               
 ** <p>APP_STEAM_VR = 'SteamVR'</p>
 ** <p>APP_OCCULUS_STORE = 'Occulus store'</p>
@@ -43,6 +43,8 @@
 **<p>/////////////////github</p>
 *
 **<p>githttps://github.com/Kecody/bigscreenproject2try.git</p>
+
+///////////////////////////////////////////////////////////////////////////////
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
