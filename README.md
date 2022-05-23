@@ -13,8 +13,8 @@
 *
 **<p>127.0.0.1:750/login</p>
 *
-**<p>Identifiant: admin@bigscreen.fr</p>
-**<p>MDP: VRquiz</p>
+**<p>Identifiant: admin@bigscreen.fr<br>
+**MDP: VRquiz</p>
 *
 **<p>//////ajouter-ca au .env.exemple////</p>
     <p>&#11015;&#65039;</p>
