@@ -17,11 +17,13 @@
 **<p>MDP: VRquiz</p>
 *
 **<p>//////ajouter-ca au .env.exemple////</p>
-*              ||  
-               ||
-              _||_
-              \  /
-               \/
+    <ul>     
+           <li>||</li>  
+           <li>||</li> 
+          <li>_||_</li> 
+          <li>\  /</li> 
+           <li>\/</li> 
+    </ul>               
 ** <p>APP_STEAM_VR = 'SteamVR'</p>
 ** <p>APP_OCCULUS_STORE = 'Occulus store'</p>
 ** <p>APP_VIVEPORT = 'Viveport'</p>
