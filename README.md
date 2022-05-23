@@ -14,29 +14,28 @@
 **<p>127.0.0.1:750/login</p>
 *
 **<p>Identifiant: admin@bigscreen.fr<br>
-**MDP: VRquiz</p>
+MDP: VRquiz</p>
 *
 **<p>//////ajouter-ca au .env.exemple////</p>
     <p>&#11015;&#65039;</p>
-** <p>APP_STEAM_VR = 'SteamVR'</p>
-** <p>APP_OCCULUS_STORE = 'Occulus store'</p>
-** <p>APP_VIVEPORT = 'Viveport'</p>
-** <p>APP_PLAYSTATION_VR = 'Playstation VR'</p>
-** <p>APP_GOOGLE_PLAY = 'Google Play'</p>
-** <p>APP_WINDOWS_STORE = 'Windows store'</p>
-** <p>APP_OCCULUS_RIFTS = 'Occulus Rift/s'</p>
-** <p>APP_HTC_VIVE = 'HTC Vive'</p>
-** <p>APP_WINDOWS_MIXED_REALITY = 'Windows Mixed Reality'</p>
-** <p>APP_PSVR = 'PSVR'</p>
-** <p>APP_WATCH_TV = 'regarder des émissions TV en direct'</p>
-** <p>APP_WATCH_FILM = 'regarder des films'</p>
-** <p>APP_PLAYSOLO = 'jouer en solo'</p>
-** <p>APP_PLAYTEAM = 'jouer en team'</p>
+ <p>APP_STEAM_VR = 'SteamVR'</p>
+ <p>APP_OCCULUS_STORE = 'Occulus store'</p>
+ <p>APP_VIVEPORT = 'Viveport'</p>
+ <p>APP_PLAYSTATION_VR = 'Playstation VR'</p>
+ <p>APP_GOOGLE_PLAY = 'Google Play'</p>
+ <p>APP_WINDOWS_STORE = 'Windows store'</p>
+ <p>APP_OCCULUS_RIFTS = 'Occulus Rift/s'</p>
+ <p>APP_HTC_VIVE = 'HTC Vive'</p>
+ <p>APP_WINDOWS_MIXED_REALITY = 'Windows Mixed Reality'</p>
+ <p>APP_PSVR = 'PSVR'</p>
+ <p>APP_WATCH_TV = 'regarder des émissions TV en direct'</p>
+ <p>APP_WATCH_FILM = 'regarder des films'</p>
+ <p>APP_PLAYSOLO = 'jouer en solo'</p>
+ <p>APP_PLAYTEAM = 'jouer en team'</p>
 *
 *
 **<p>/////////////////github</p>
-*
-**<p>githttps://github.com/Kecody/bigscreenproject2try.git</p>
+<p>githttps://github.com/Kecody/bigscreenproject2try.git</p>
 
 ///////////////////////////////////////////////////////////////////////////////
 
