@@ -17,13 +17,7 @@
 **<p>MDP: VRquiz</p>
 *
 **<p>//////ajouter-ca au .env.exemple////</p>
-    <ul>     
-           <li style ="list-style-type:none;">||</li>  
-           <li style ="list-style-type:none;">||</li> 
-          <li style ="list-style-type:none;">_||_</li> 
-          <li style ="list-style-type:none;">\  /</li> 
-           <li style ="list-style-type:none;">\/</li> 
-    </ul>               
+    <p>&#11015;&#65039;</p>
 ** <p>APP_STEAM_VR = 'SteamVR'</p>
 ** <p>APP_OCCULUS_STORE = 'Occulus store'</p>
 ** <p>APP_VIVEPORT = 'Viveport'</p>
@@ -111,9 +105,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 "# bigscreenproject2try" 
-<style>
-    li {
-        list-style-type:none;
-    }
-</style>
+
 
