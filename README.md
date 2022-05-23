@@ -35,7 +35,7 @@ MDP: VRquiz</p>
 *
 *
 **<p>/////////////////github</p>
-<p>githttps://github.com/Kecody/bigscreenproject2try.git</p>
+<p>https://github.com/Kecody/bigscreenproject2try.git</p>
 
 ///////////////////////////////////////////////////////////////////////////////
 
