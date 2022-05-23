@@ -18,11 +18,11 @@
 *
 **<p>//////ajouter-ca au .env.exemple////</p>
     <ul>     
-           <li style ="list-style-type:none">||</li>  
-           <li style ="list-style-type:none">||</li> 
-          <li style ="list-style-type:none">_||_</li> 
-          <li style ="list-style-type:none">\  /</li> 
-           <li style ="list-style-type:none">\/</li> 
+           <li style ="list-style-type:none;">||</li>  
+           <li style ="list-style-type:none;">||</li> 
+          <li style ="list-style-type:none;">_||_</li> 
+          <li style ="list-style-type:none;">\  /</li> 
+           <li style ="list-style-type:none;">\/</li> 
     </ul>               
 ** <p>APP_STEAM_VR = 'SteamVR'</p>
 ** <p>APP_OCCULUS_STORE = 'Occulus store'</p>
