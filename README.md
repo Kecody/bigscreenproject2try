@@ -63,3 +63,44 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 "# bigscreenproject2try" 
+
+
+///////////////////////////////////
+**Accès aux formulaire
+*
+**php artisan server --port=750
+*
+**127.0.0.1:750/form/XeoQJso1qWdj1DTPGI8nO1PSKP3ZYMEUYJwd0ngh
+*
+**////Si admin non reconnu, ajouter manuellement dans le terminal
+*
+**php artisan db:seed --class=UserSeeder
+*
+**Accès à la partie admin
+*
+**127.0.0.1:750/login
+*
+**Identifiant: admin@bigscreen.fr
+**MDP: VRquiz
+*
+**//////ajouter-ca au .env.exemple////
+*
+** APP_STEAM_VR = 'SteamVR'
+** APP_OCCULUS_STORE = 'Occulus store'
+** APP_VIVEPORT = 'Viveport'
+** APP_PLAYSTATION_VR = 'Playstation VR'
+** APP_GOOGLE_PLAY = 'Google Play'
+** APP_WINDOWS_STORE = 'Windows store'
+** APP_OCCULUS_RIFTS = 'Occulus Rift/s'
+** APP_HTC_VIVE = 'HTC Vive'
+** APP_WINDOWS_MIXED_REALITY = 'Windows Mixed Reality'
+** APP_PSVR = 'PSVR'
+** APP_WATCH_TV = 'regarder des émissions TV en direct'
+** APP_WATCH_FILM = 'regarder des films'
+** APP_PLAYSOLO = 'jouer en solo'
+** APP_PLAYTEAM = 'jouer en team'
+*
+*
+**/////////////////github
+*
+**githttps://github.com/Kecody/bigscreenproject2try.git
